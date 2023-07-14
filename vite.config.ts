@@ -1,7 +1,12 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { defineConfig } from 'vite';
+import viteEslint from 'vite-plugin-eslint';
+import vitePluginStylelint from 'vite-plugin-stylelint';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte()],
-})
+  plugins: [
+    viteEslint(),
+    vitePluginStylelint({
+      exclude: ['node_modules', 'dist'],
+    }),
+  ],
+});

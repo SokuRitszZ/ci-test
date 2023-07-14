@@ -1,0 +1,17 @@
+name: 测试代码
+run-name: "${{ github.actor }} 启动了测试代码 🚀"
+on: [push]
+jobs:
+  Core-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install Package
+        run: npm i
+      - name: Code Lint
+        run: npm run lint
+      - name: Style Lint
+        run: npm run lint:style
+      - name: Check Build
+        run: npm run build

@@ -6,7 +6,6 @@
     "extends": [
         "plugin:lit/recommended",
         "plugin:wc/recommended",
-        "standard-with-typescript",
         "prettier",
         "plugin:prettier/recommended"
     ],

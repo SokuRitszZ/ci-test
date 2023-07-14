@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite';
-import viteEslint from 'vite-plugin-eslint';
-import vitePluginStylelint from 'vite-plugin-stylelint';
+import eslint from 'vite-plugin-eslint2';
+import stylelint from 'vite-plugin-stylelint';
 
 export default defineConfig({
   plugins: [
-    viteEslint(),
-    vitePluginStylelint({
+    eslint(),
+    stylelint({
       exclude: ['node_modules', 'dist'],
     }),
   ],
